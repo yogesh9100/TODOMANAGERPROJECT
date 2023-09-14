@@ -1,0 +1,14 @@
+<template>
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small">
+            <c-create-task></c-create-task>  
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small">
+            <c-to-do-list lwf:ref="pendingToDo"></c-to-do-list>
+        </lightning-layout-item>
+        <lightning-layout-item size="6" padding="around-small">
+            <c-to-do-list lwf:ref="completedToDo"></c-to-do-list>
+        </lightning-layout-item> 
+    </lightning-layout>
+   
+</template>

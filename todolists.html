@@ -1,0 +1,34 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Pending Tasks" icon-name="Standard:task">
+        <template lwc:if={todolists}>
+            <div class="slds-var-m-around_medium">
+                <template for:each={todolists} for:item="todo">
+                    <lightning-layout
+                    key={todo.Id}
+                    class="slds-var-m-vertical_x-small custom-box"
+                    vertical-align="strech"
+                    multiple-rows="true"
+                    >
+                    <lightning-layout-item size="11" padding="around-small">
+                        <b>
+                            Task: {todo.Title__c}
+                            <br/>
+                            Due Date: {todo.Due_Date__c}
+
+                        </b>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="1" padding="around-small">
+                        <!-- sldsValidatorIgnoreNextLine -->
+                        <lightning-button-icon
+                        icon-name="standard:task2"
+                        alternative-text="Seetings"
+                        title="Seetings"
+                        ></lightning-button-icon>
+                    </lightning-layout-item>
+                </lightning-layout>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>
